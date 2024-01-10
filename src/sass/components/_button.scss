@@ -1,0 +1,17 @@
+.button {
+	display: inline-block;
+	background-color: $grey-button;
+	padding:  .8rem 1.8rem;
+	font-size: .8rem;
+	line-height: 1rem;
+	letter-spacing: 1px;
+	color: $white;
+	border: 1px solid $grey-button;
+	transition: all .3s ease-in-out;
+	height: calc(1.6rem + 1rem + 2px); // 1.6rem = padding top + bottom, 1rem = font-size, 2px = border soit 2,725rem
+
+	&:hover {
+		background-color: transparent;
+		color: $grey;
+	}
+}

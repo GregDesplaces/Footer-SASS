@@ -1,0 +1,18 @@
+.container {
+	width: $bp-desktop;
+	margin: 2rem auto;
+
+	@media (max-width: $bp-desktop) {
+		width: 95%;
+		min-width: 300px;
+	}
+
+	&-flex {
+		display: flex;
+
+		@media screen and (max-width: $bp-tablet) {
+			flex-direction: column;
+			
+		}
+	}
+}

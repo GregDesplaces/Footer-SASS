@@ -1,0 +1,69 @@
+footer {
+	// Partie après le logo
+	.container-flex {
+
+		margin-top: 3rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $grey;
+		margin-bottom: 1rem;
+
+
+
+		//--- Partie texte ---
+		> div:first-child {
+			width: 40%;
+			padding-right: 3rem;
+		}
+
+		//--- Partie formulaire ---
+		> div:nth-child(2) {
+			display: flex; // pour mettre le form en stretch
+			// background: rgb(79, 79, 208);
+
+			@media screen and (max-width: $bp-tablet) {
+				padding-top: 1rem;
+				border-top: 1px solid $grey;
+				margin-top: 1rem;
+			}
+
+			form {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			input {
+				width: 49%;
+				margin-bottom: .5rem; 
+				
+
+				@media screen and (max-width: $bp-mobile) {
+					width: 100%;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				min-height: 150px;
+				resize: none;
+				margin-bottom: .5rem;
+				// on a 3*2,725rem (les inputs et le bouton) + 3*0.5rem (les marges)   = 9.675rem
+				height: calc(100% - 9.675rem);
+			}
+
+			button {
+				@media screen and (max-width: $bp-mobile) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		// Les div enfants {
+		> div {
+			@media screen and (max-width: $bp-tablet) {
+				width: 100% !important;
+			}
+		}
+	}
+}
